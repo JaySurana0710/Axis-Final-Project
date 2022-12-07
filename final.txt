@@ -1,0 +1,95 @@
+Services:
+	LOGIN / SIGNUP (SUPPLIER AND RETAILER)
+
+	RETAILER								PORT 3001
+		(retailerId,retailerName, retailerCompany, retailerEmail,retailerPassword, retailerContact )
+
+	
+	SUPPLIER								PORT 3002
+		(supplierNAME , supplierEmail, supplierPassword)
+
+
+	INVENTORY (SUPPLIER INVENTORY) 				PORT 3003
+		(productId, productName, productQuatity, productType, productPrice)
+
+	
+	ORDER 								PORT 3004
+		(orderId, retailerName, cartItems (List of Products) , orderStatus, orderAmount (Generated on acceptance of order) )
+		(RETAILER, INVENTORY)-template
+	
+		
+	
+	SUPPLIER : VIEW AND UPDATE INVENTORY, VIEW RETAILERS, accept request from retailer
+	RETAILER : VIEW INVENTORY and send request to supplier.
+
+Pages : 
+		HOME , RETAILER_LOGIN, SUPPLIER_LOGIN, RETAILER, SUPPLIER
+
+Logic : 
+		From the home page, the user can login via retailer or supplier as his/her designation and be redirected to their respective dashboards.
+		
+		The retailer dashboard consists of List of inventory along with checkbox for each product and an input field for quantity.
+		
+		The retailer checks the product and the quantity.
+
+		Then the selected products and quantity are sent to supplier for confirmation and when accepted, the request is processed in inventory.
+
+		The Supplier can manage the inventory and change quantity of products.
+
+
+QUESTIONS :  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Flow Chart
+
+
+		    	------	 RETAILER LOGIN  ---------	RETAILER DASBOARD      -------   (VIEW INVENTORY, ADD TO CART AND SEND REQUEST FOR APPROVAL)
+HOME PAGE-----
+		    	------	 SUPPLIER LOGIN  ---------	SUPPLIER DASHBOARD    ------    (VIEW ADD UPDATE INVENTORY, VIEW RETAILERS REQUESTS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
